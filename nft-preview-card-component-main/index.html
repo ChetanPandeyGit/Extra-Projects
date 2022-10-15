@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+      *{
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+    body{
+      font-family: Poppins;
+      background-color: hsl(217, 54%, 11%);
+    }
+    .container{
+      width: 300px;
+      height: 512px;
+      background-color: hsl(216, 50%, 16%);
+      margin:  10% auto ;
+      border-radius: 10px;
+      display: grid;
+      grid-template-rows: 5fr 3fr 2px 1.5fr ;
+    }
+    .hero{      
+      position: relative;
+    }
+    .main{
+      padding: 0 20px;
+    }
+    .hero img{
+      width: 100%;
+      padding: 20px;      
+      border-radius: 30px;
+      cursor: pointer;
+    }
+    .overlay{      
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 86.5%;
+      height: 85%;
+      border-radius: 10px;
+      background-color: rgba(36, 254, 254, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+    }
+    .overlay:hover{
+      opacity: 1;
+    }
+    .overlay img{     
+      width: 80px;
+    }
+    .main-name{
+      font-weight: 500;
+      font-size: x-large;
+      color: hsl(0, 0%, 100%);
+      margin-bottom: 5px;
+      cursor: pointer;
+    }
+    .main-name:hover{
+      color: cyan;
+    }
+    .main-desc{
+      font-weight: 300;
+      color:  hsl(215, 51%, 70%);
+      margin-bottom: 10px;
+      font-size: small;
+    }
+    .more-desc{
+      display: flex;
+      place-content: space-between;
+      font-size: small;
+    }
+    .value{
+      font-weight: 300;
+      color: hsl(178, 100%, 50%);
+    }
+    .time{
+      font-weight: 300;
+      color: hsl(215, 51%, 70%);
+    }
+    hr{
+      width: 90%;
+      margin: auto;
+      border-color: hsl(215, 32%, 27%);
+    }
+    .footer{
+      display: flex;
+      place-items: center;
+      padding: 0 20px;
+    }
+    .footer img{
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      margin-right: 10px;
+      border: 2px solid white;
+    }
+    .credit{
+      color: hsl(215, 51%, 70%);
+      font-size: small;
+    }
+    span{
+      color: white;
+      cursor: pointer;
+    }
+    span:hover{
+      color: cyan;
+    }
+  
+@media (min-width : 380px){
+    body{
+      display: flex;
+      place-content: center center;
+    }
+}
+
+  </style>
+</head>
+<body>
+    <div class="container">
+      <div class="hero">        
+          <img src="./images/image-equilibrium.jpg" >
+          <div class="overlay"><img src="./images/icon-view.svg" alt=""> </div>
+      </div>
+      <div class="main">
+        <div class="main-name">Equilibrium #3429</div>
+        <div class="main-desc">Our Equilibrium collection promotes balance and calm.</div>
+        <div class="more-desc">
+          <div class="value"><img src="./images/icon-ethereum.svg"> 0.041 ETH</div>
+          <div class="time"><img src="./images/icon-clock.svg"> 3 days left</div>
+        </div>
+      </div><hr>
+      <div class="footer">
+        <img src="./images/image-avatar.png" alt="">
+        <div class="credit">Creation of <span>Jules Wyvern</span></div>
+      </div>
+  </div>
+</body>
+</html>
